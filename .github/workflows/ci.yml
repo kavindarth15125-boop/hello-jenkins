@@ -16,19 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Compile Java
-        run: javac Hello.java
-
-      - name: Run Java
-        run: java Hello
-
-
+      
       - name: Print Username
         run: echo "Hello ${{ github.event.inputs.username }}"
 
@@ -40,4 +28,16 @@ jobs:
 
       - name: Show file
         run: cat test.txt
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Compile Java
+        run: javac Hello.java
+
+      - name: Run Java
+        run: java Hello
 
