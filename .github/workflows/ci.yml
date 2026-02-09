@@ -40,6 +40,8 @@ jobs:
 
       - name: Run Java
         run: java Hello
+      - name: List files
+        run: ls
         
       - name: Upload artifact
         uses: actions/upload-artifact@v3
