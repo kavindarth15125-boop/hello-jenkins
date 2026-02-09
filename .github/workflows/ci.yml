@@ -40,4 +40,10 @@ jobs:
 
       - name: Run Java
         run: java Hello
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-files
+          path: "*.class"
 
