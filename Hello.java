@@ -3,3 +3,6 @@ public class Hello {
         System.out.println("Hello from CI Pipeline");
     }
 }
+
+// Git integration test
+
